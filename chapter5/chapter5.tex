@@ -1,0 +1,376 @@
+\chapter{考察}
+この章では実験で得られた結果をもとに、L*、a*、b*の値での標準偏差を用いた変換とグラデーションプレートを用いた２つの色変換の比較、分析を行う。
+
+\section{[画像i、画像ii]の組みについて}
+まず画像iを対象画像、画像iiを参照画像、画像iiを対象画像、画像iを参照画像とした時の色変換を比較していく。\par
+画像viiと画像viiiでは全体的に明るさの強弱が激しくコントラストが強いイメージを持つということと、全体的に色が薄く、ぼんやりとしたイメージを持つということから対象画像と参照画像のL*（明度）の標準偏差の値が大きすぎることからL*の値を変換する際において、大きく値が変換されてしまったと予測される。\par
+画像iと画像iiの特徴領域での平均値とその標準偏差は以下のようになる。
+\begin{screen}
+画像iの標準偏差\\
+L*=13.664367 a*=11.173760 b*=7.886306\\
+画像iiの標準偏差\\
+L*=23.590553 a*=13.905792 b*=13.118247
+  \end{screen}
+\begin{figure}[htbp]
+  \begin{center}
+    \begin{tabular}{c}
+
+      % 1
+      \begin{minipage}{0.45\hsize}
+        \begin{center}
+          \includegraphics[clip, width=6.5cm]{./i.eps}
+          %\hspace{1.6cm}
+          \caption{画像iの平均値と標準偏差}
+          \label{fig:seininhsv}
+        \end{center}
+      \end{minipage}
+
+      % 2
+      \begin{minipage}{0.45\hsize}
+        \begin{center}
+          \includegraphics[clip, width=6.5cm ]{./ii.eps}
+          %\hspace{1.6cm}
+          \caption{画像iiの平均値と標準偏差}
+          \label{fig:kinninhsv}
+        \end{center}
+      \end{minipage}
+
+
+    \end{tabular}
+  \end{center}
+\end{figure}
+\newpage
+これらより、色変換を行う際に画像iを対象画像、画像iiを参照画像とした場合、L*は約1.75倍の誤差、a*は約1.25倍の誤差、b*は約1.65倍の誤差が生じる。また、画像iiを対象画像、画像iを参照画像とした場合、L*は約0.55倍の誤差、a*は約0.8倍の誤差、b*は約0.6倍の誤差が生じる。\par
+これらの結果より、L*とb*ではかなりの誤差が発生していたことがわかる。これらの結果より色変換を行った際に得られた画像では明度の強弱が激しく、コントラストが強いイメージを持つ画像が得られた結果となった。\par
+
+\newpage
+画像ixと画像xではグラデーションプレートを用いて色変換を行ったことにより色分布での偏りがある特徴を生かして色変換を行ったことにより画像viiと画像viiiに比べ自然体な色に変換できている。\par
+
+画像iと画像iiの特徴領域でのLab色空間における色分布とグラデーションプレートの式を以下に示す。
+
+\begin{figure}[htbp]
+  \begin{center}
+    \begin{tabular}{c}
+
+      % 1
+      \begin{minipage}{0.45\hsize}
+        \begin{center}
+          \includegraphics[clip, width=6.5cm]{./chapter5/1_gra.eps}
+          %\hspace{1.6cm}
+          \caption{画像iの特徴領域の色分布}
+          \label{fig:seininhsv}
+        \end{center}
+      \end{minipage}
+
+      % 2
+      \begin{minipage}{0.45\hsize}
+        \begin{center}
+          \includegraphics[clip, width=6.5cm ]{./chapter5/2_gra.eps}
+          %\hspace{1.6cm}
+          \caption{画像iiの特徴領域の色分布}
+          \label{fig:kinninhsv}
+        \end{center}
+      \end{minipage}
+
+
+    \end{tabular}
+  \end{center}
+\end{figure}
+
+\begin{screen}
+画像iのグラデーションプレートの式\\
+b=0.789043a\\
+画像iiのグラデーションプレートの式\\
+b=1.269884a
+  \end{screen}
+
+\newpage
+これらの結果の元、変換された図5.1と図5.2の色分布は以下のようになる。
+\begin{figure}[htbp]
+  \begin{center}
+    \begin{tabular}{c}
+
+      % 1
+      \begin{minipage}{0.45\hsize}
+        \begin{center}
+          \includegraphics[clip, width=6.5cm]{./chapter5/7_gra.eps}
+          %\hspace{1.6cm}
+          \caption{変換後の色分布}
+          \label{fig:seininhsv}
+        \end{center}
+      \end{minipage}
+
+      % 2
+      \begin{minipage}{0.45\hsize}
+        \begin{center}
+          \includegraphics[clip, width=6.5cm ]{./chapter5/8_gra.eps}
+          %\hspace{1.6cm}
+          \caption{変換後の色分布}
+          \label{fig:kinninhsv}
+        \end{center}
+      \end{minipage}
+
+
+    \end{tabular}
+  \end{center}
+\end{figure}
+ 
+グラフより変換後の色分布は変換前の色分布に比べてグラデーションプレートの式の傾き分だけ変換されている。これにより対象画像が参照画像のイメージに近似することができていることがわかる。
+
+
+\newpage
+\section{[画像iii、画像iv]の組みについて}
+次に画像iiiを対象画像、画像ivを参照画像、画像ivを対象画像、画像iiiを参照画像とした時の色変換を比較していく。\par
+画像xiと画xiiiでは、特徴領域の部分以外の部分までも特徴領域に近い色に変換され、画像全体が薄くほとんど同じ色になってしまっていたり、理想の色とは少し違う色に変換されてしまうという結果から標準偏差の値が大きすぎることから値を変換する際において、大きく値が変換されてしまったと予測される。\par
+画像iiiと画像ivの特徴領域での平均値とその標準偏差は以下のようになる。
+\begin{screen}
+画像iiiの標準偏差\\
+L*=2.636471 a*=11.314371 b*=8.295244\\
+画像ivの標準偏差\\
+L*=4.542517 a*=6.807040 b*=1.062327
+  \end{screen}
+\begin{figure}[htbp]
+  \begin{center}
+    \begin{tabular}{c}
+
+      % 1
+      \begin{minipage}{0.45\hsize}
+        \begin{center}
+          \includegraphics[clip, width=6.5cm]{./iii.eps}
+          %\hspace{1.6cm}
+          \caption{画像iiiの平均値と標準偏差}
+          \label{fig:seininhsv}
+        \end{center}
+      \end{minipage}
+
+      % 2
+      \begin{minipage}{0.45\hsize}
+        \begin{center}
+          \includegraphics[clip, width=6.5cm ]{./iv.eps}
+          %\hspace{1.6cm}
+          \caption{画像ivの平均値と標準偏差}
+          \label{fig:kinninhsv}
+        \end{center}
+      \end{minipage}
+
+
+    \end{tabular}
+  \end{center}
+\end{figure}
+\par
+これらより、色変換を行う際に画像iiiを対象画像、画像ivを参照画像とした場合、L*は約1.72倍の誤差、a*は約0.60倍の誤差、b*は約0.13倍の誤差が生じる。また、画像ivを対象画像、画像iiiを参照画像とした場合、L*は約0.58倍の誤差、a*は約1.66倍の誤差、b*は約7.80倍の誤差が生じる。\par
+これらの結果より、b*ではかなりの誤差が発生していたことがわかる。これらの結果より色変換を行った際に得られた画像xiでは薄くb*が0に近い値を取るようになり、薄い色になってしまい、画像xiiではb*が大きすぎる値を取ってしまうことから画像全体が緑色っぽい色になってしまう結果となった。\par
+
+画像xiiiと画像xivではグラデーションプレートを用いて色変換を行ったことにより色分布での偏りがある特徴を生かして色変換を行ったことにより画像xiと画像xiiに比べ自然体な色に変換できている。\par
+
+画像iiiと画像ivの特徴領域でのLab色空間における色分布とグラデーションプレートの式を以下に示す。
+\begin{figure}[htbp]
+  \begin{center}
+    \begin{tabular}{c}
+
+      % 1
+      \begin{minipage}{0.45\hsize}
+        \begin{center}
+          \includegraphics[clip, width=6.5cm]{./chapter5/3_gra.eps}
+          %\hspace{1.6cm}
+          \caption{画像iiiの特徴領域の色分布}
+          \label{fig:seininhsv}
+        \end{center}
+      \end{minipage}
+
+      % 2
+      \begin{minipage}{0.45\hsize}
+        \begin{center}
+          \includegraphics[clip, width=6.5cm ]{./chapter5/4_gra.eps}
+          %\hspace{1.6cm}
+          \caption{画像ivの特徴領域の色分布}
+          \label{fig:kinninhsv}
+        \end{center}
+      \end{minipage}
+
+
+    \end{tabular}
+  \end{center}
+\end{figure}
+
+\begin{screen}
+画像iiiのグラデーションプレートの式\\
+b=0.875717a\\
+画像ivのグラデーションプレートの式\\
+b=0.033933a
+  \end{screen}
+
+\newpage
+これらの結果の元、変換された図5.5と図5.6の色分布は以下のようになる。
+\begin{figure}[htbp]
+  \begin{center}
+    \begin{tabular}{c}
+
+      % 1
+      \begin{minipage}{0.45\hsize}
+        \begin{center}
+          \includegraphics[clip, width=6.5cm]{./chapter5/9_gra.eps}
+          %\hspace{1.6cm}
+          \caption{変換後の色分布}
+          \label{fig:seininhsv}
+        \end{center}
+      \end{minipage}
+
+      % 2
+      \begin{minipage}{0.45\hsize}
+        \begin{center}
+          \includegraphics[clip, width=6.5cm ]{./chapter5/10_gra.eps}
+          %\hspace{1.6cm}
+          \caption{変換後の色分布}
+          \label{fig:kinninhsv}
+        \end{center}
+      \end{minipage}
+
+
+    \end{tabular}
+  \end{center}
+\end{figure}
+ 
+グラフより変換後の色分布は変換前の色分布に比べてグラデーションプレートの式の傾き分だけ変換されている。これにより対象画像が参照画像のイメージに近似することができていることがわかる。
+
+
+\newpage
+\section{[画像v、画像vi]の組みについて}
+最後に画像vを対象画像、画像viを参照画像、画像viを対象画像、画像vを参照画像とした時の色変換を比較していく。\par
+画像xvと画像xviでは、今までとは違い画像全体がほぼ同じ絵柄で構成された画像となっており、イメージも画像全体どこを取っても同じような画像である。その結果、画像xvと画像xvi共特徴領域通りに画像全体に落ち着いた雰囲気を持ったり、明るい色に近づけることができた結果となった予測される。\par
+画像xvと画像xviの特徴領域での平均値とその標準偏差は以下のようになる。
+\begin{screen}
+画像vの標準偏差\\
+L*=15.179082 a*=22.568108 b*=8.639878\\
+画像viの標準偏差\\
+L*=10.071629 a*=5.351092 b*=4.652703
+  \end{screen}
+\begin{figure}[htbp]
+  \begin{center}
+    \begin{tabular}{c}
+
+      % 1
+      \begin{minipage}{0.45\hsize}
+        \begin{center}
+          \includegraphics[clip, width=6.5cm]{./v.eps}
+          %\hspace{1.6cm}
+          \caption{画像vの平均値と標準偏差}
+          \label{fig:seininhsv}
+        \end{center}
+      \end{minipage}
+
+      % 2
+      \begin{minipage}{0.45\hsize}
+        \begin{center}
+          \includegraphics[clip, width=6.5cm ]{./vi.eps}
+          %\hspace{1.6cm}
+          \caption{画像viの平均値と標準偏差}
+          \label{fig:kinninhsv}
+        \end{center}
+      \end{minipage}
+
+
+    \end{tabular}
+  \end{center}
+\end{figure}
+\par
+これらより、色変換を行う際に画像vを対象画像、画像viを参照画像とした場合、L*は約0.66倍の誤差、a*は約0.24倍の誤差、b*は約0.54倍の誤差が生じる。また、画像viを対象画像、画像vを参照画像とした場合、L*は約1.50倍の誤差、a*は約4.22倍の誤差、b*は約1.85倍の誤差が生じる。
+\newpage
+これらの結果より、a*ではかなりの誤差が発生していたことがわかる。これらの結果より色変換を行った際に得られた画像xvでは薄くa*が0に近い値を取るようになり、薄い色になってしまい、画像xviではa*が大きすぎる値を取ってしまうことから画像全体が赤色っぽい色になってしまう結果となった。しかし、画像全体が特徴領域で指定したイメージと同じことから、標準偏差の誤差の分だけより、イメージに近い色を取ってしまう結果となった。しかし、特徴領域の取り方によっては標準偏差の値も変わってきてしまうことから、すべてがうまくいくとは限らない。\par
+
+
+画像xviiと画像xviiiではグラデーションプレートを用いて色変換を行ったことにより色分布での偏りがある特徴を生かして色変換を行ったが画像xviに比べイメージ通りの変換があまりできていない。\par
+
+画像vと画像viの特徴領域でのLab色空間における色分布とグラデーションプレートの式を以下に示す。
+\begin{figure}[htbp]
+  \begin{center}
+    \begin{tabular}{c}
+
+      % 1
+      \begin{minipage}{0.45\hsize}
+        \begin{center}
+          \includegraphics[clip, width=6.5cm]{./chapter5/5_gra.eps}
+          %\hspace{1.6cm}
+          \caption{画像vの特徴領域の色分布}
+          \label{fig:seininhsv}
+        \end{center}
+      \end{minipage}
+
+      % 2
+      \begin{minipage}{0.45\hsize}
+        \begin{center}
+          \includegraphics[clip, width=6.5cm ]{./chapter5/6_gra.eps}
+          %\hspace{1.6cm}
+          \caption{画像viの特徴領域の色分布}
+          \label{fig:kinninhsv}
+        \end{center}
+      \end{minipage}
+
+
+    \end{tabular}
+  \end{center}
+\end{figure}
+
+\begin{screen}
+画像vのグラデーションプレートの式\\
+b=1.538775a\\
+画像viのグラデーションプレートの式\\
+b=52.222663a
+  \end{screen}
+
+\newpage
+これらの結果の元、変換された図5.9と図5.10の色分布は以下のようになる。
+\begin{figure}[htbp]
+  \begin{center}
+    \begin{tabular}{c}
+
+      % 1
+      \begin{minipage}{0.45\hsize}
+        \begin{center}
+          \includegraphics[clip, width=6.5cm]{./chapter5/11_gra.eps}
+          %\hspace{1.6cm}
+          \caption{変換後の色分布}
+          \label{fig:seininhsv}
+        \end{center}
+      \end{minipage}
+
+      % 2
+      \begin{minipage}{0.45\hsize}
+        \begin{center}
+          \includegraphics[clip, width=6.5cm ]{./chapter5/12_gra.eps}
+          %\hspace{1.6cm}
+          \caption{変換後の色分布}
+          \label{fig:kinninhsv}
+        \end{center}
+      \end{minipage}
+
+
+    \end{tabular}
+  \end{center}
+\end{figure}
+ 
+図5.17の色分布は変換前の色分布に比べてグラデーションプレートの式の傾き分だけ変換されている。これにより対象画像が参照画像のイメージに近似することができていることがわかる。しかし、図5.18のグラフは変換前の色分布に比べてグラデーションプレートの式の傾き分だけ変換されていないことがわかる。これにより対象画像が参照画像のイメージに近似することができていない。画像viのグラデーションプレートの式を見てみると傾きが52.222663ととても大きな値であることがわかる。一方、画像vのグラデーションプレートの式は傾きが1.538775と画像viと比べると差は大きい。これからわかるのはLab色空間においてb軸上付近に色分布を持つ画像のグラデーションプレートの式の傾きはとても大きいか、小さい値を持つことがわかる。これにより、b軸上付近の色分布は傾きが1付近などの色分布に比べて分布間の距離によっての傾きの差が大きくなることがわかる。この結果、グラデーションプレートの傾きを変換する際において、ある一つの色がそのグラデーションプレート付近に色が分布していたとしても、その傾きの差は大きく、変換する際において大きな誤差が生まれてしまうことがわかる。\par
+
+\newpage
+図5.18における計算の一部を以下に示す。
+\begin{table}[htb]
+  \begin{tabular}{|lccc|}\hline
+    一つの色(b,a) & 画像viの傾き &  画像vの傾き & 変換後の傾き \\
+    (26.888064,0.068885) &52.222663 &1.538775 &339.646613\\
+    (32.778125,0.050130) &52.222663 &1.538775 &603.173444\\
+    (28.805695,0.279431) &52.222663 &1.538775 &52.402978\\
+    (24.269802,0.280468) &52.222663 &1.538775 &35.849426\\
+    (29.193017,0.292032) &52.222663 &1.538775 &49.281401\\
+    (30.791667,0.316582) &52.222663 &1.538775 &46.578994\\
+    (26.345009,0.254959) &52.222663 &1.538775 &52.646612\\
+    (28.870321,0.167430) &52.222663 &1.538775 &121.748118\\
+    (31.333607,0.110749) &52.222663 &1.538775 &232.239399\\
+    (25.169050,0.157851) &52.222663 &1.538775 &108.763890\\\hline
+  \end{tabular}
+\end{table}
+\par
+これらのことから、図5.18では変換前の色分布がb軸上に近いところに位置していたため傾きを変換する際にうまく変換されていないことがわかる。このことから、色分布がb軸上付近に位置している場合はグラデーションプレートを用いて色変換を行うことは難しいということが言える。
+\newpage
+\section{まとめ}
+これらの結果からLab空間で色変換をする際において、Lab空間でL*、a*、b*の値での標準偏差を用いた場合、色相はa*=0、b*=0からの角度によって決められるため、似たような色を持つ場合のL*、a*、b*の値に偏りは見られない。このことから標準偏差の値は大きくなり色変換をする際において大きな誤差が出てきてしまうことからL*、a*、b*の値での標準偏差を用いた変換は望ましくない。\par
+Lab空間でグラデーションプレートを用いて変換する場合、a*=0、b*=0からの直線からL軸に平行な平面を置いた平面を用いて色変換するため、Lab空間における色相の偏りを生かして変換できるため誤差が少なく色変換が行える。一方、Lab色空間上のb軸上に色分布がある場合はグラデーションプレートを用いると色変換がうまくいかないということがある。
