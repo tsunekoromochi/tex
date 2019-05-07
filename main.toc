@@ -1,0 +1,39 @@
+\contentsline {chapter}{\numberline {第 1 章}序論}{1}
+\contentsline {section}{\numberline {1.1 節}はじめに}{2}
+\contentsline {subsection}{\numberline {1.1.1.}背景}{2}
+\contentsline {subsection}{\numberline {1.1.2.}本研究の狙い}{3}
+\contentsline {chapter}{\numberline {第 2 章}原理}{4}
+\contentsline {section}{\numberline {2.1 節}Lab色空間}{4}
+\contentsline {subsection}{\numberline {2.1.1.}Lab空間の利点}{6}
+\contentsline {section}{\numberline {2.2 節}色変換}{7}
+\contentsline {section}{\numberline {2.3 節}L*、a*、b*の値での標準偏差を用いた色変換}{8}
+\contentsline {subsection}{\numberline {2.3.1.}分散}{8}
+\contentsline {subsection}{\numberline {2.3.2.}標準偏差}{8}
+\contentsline {subsection}{\numberline {2.3.3.}変換法}{9}
+\contentsline {subsection}{\numberline {2.3.4.}問題点}{10}
+\contentsline {chapter}{\numberline {第 3 章}提案法}{11}
+\contentsline {section}{\numberline {3.1 節}改善案}{11}
+\contentsline {section}{\numberline {3.2 節}グラデーションプレートを用いた色変換}{13}
+\contentsline {subsection}{\numberline {3.2.1.}グラデーションプレートについて}{13}
+\contentsline {subsection}{\numberline {3.2.2.}変換法}{14}
+\contentsline {subsection}{\numberline {3.2.3.}実験手順}{18}
+\contentsline {chapter}{\numberline {第 4 章}実験}{19}
+\contentsline {section}{\numberline {4.1 節}実験方法}{19}
+\contentsline {subsection}{\numberline {4.1.1.}使用する画像}{19}
+\contentsline {section}{\numberline {4.2 節}実験結果}{24}
+\contentsline {subsection}{\numberline {4.2.1.}[画像i,画像ii]での実験結果}{24}
+\contentsline {subsubsection}{\numberline {4.2.1.1.}L*、a*、b*の値での標準偏差を用いた色変換}{24}
+\contentsline {subsubsection}{\numberline {4.2.1.2.}グラデーションプレートに基づく色変換}{25}
+\contentsline {subsection}{\numberline {4.2.2.}[画像iii,画像iv]での実験結果}{26}
+\contentsline {subsubsection}{\numberline {4.2.2.1.}L*、a*、b*の値での標準偏差を用いた色変換}{26}
+\contentsline {subsubsection}{\numberline {4.2.2.2.}グラデーションプレートに基づく色変換}{27}
+\contentsline {subsection}{\numberline {4.2.3.}[画像v,画像vi]での実験結果}{28}
+\contentsline {subsubsection}{\numberline {4.2.3.1.}L*、a*、b*の値での標準偏差を用いた色変換}{28}
+\contentsline {subsubsection}{\numberline {4.2.3.2.}グラデーションプレートに基づく色変換}{29}
+\contentsline {chapter}{\numberline {第 5 章}考察}{30}
+\contentsline {section}{\numberline {5.1 節}[画像i、画像ii]の組みについて}{30}
+\contentsline {section}{\numberline {5.2 節}[画像iii、画像iv]の組みについて}{34}
+\contentsline {section}{\numberline {5.3 節}[画像v、画像vi]の組みについて}{37}
+\contentsline {section}{\numberline {5.4 節}まとめ}{41}
+\contentsline {chapter}{\numberline {第 6 章}結論}{42}
+\contentsline {chapter}{参考文献}{45}

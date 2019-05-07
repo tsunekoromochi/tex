@@ -1,0 +1,29 @@
+
+\documentstyle[ascmac,graphicx,psfrag,subfigure,amsmath,multirow]{mysoturon}
+
+\begin{document}
+
+\baselineskip 7.75mm
+
+\input{cover/cover.tex}
+
+\pagenumbering{roman}
+\setcounter{page}{1}
+\tableofcontents  % 目次
+
+\newpage
+\pagenumbering{arabic}
+
+\input{chapter1/chapter1.tex}  % 第1章 序論
+\input{chapter2/chapter2.tex}  % 第2章 従来法
+\input{chapter3/chapter3.tex}  % 第3章 提案法
+\input{chapter4/chapter4.tex}  % 第4章 結論
+\input{chapter5/chapter5.tex} 
+\input{chapter6/chapter6.tex}
+\input{thanks.tex}    % 謝辞
+\input{sanko.tex}     % 参考文献
+
+%\include{furoku}    % 付録 プログラム
+
+\end{document}
+

@@ -1,0 +1,679 @@
+This is pTeXk, Version 3.1415926-p3.1.11 (utf8.euc) (Web2C 2009) (format=platex 2015.4.13)  12 FEB 2018 17:01
+ %&-line parsing enabled.
+**main.tex
+(./main.tex
+pLaTeX2e <2006/11/10>+0 (based on LaTeX2e <2009/09/24> patch level 0)
+(/usr/share/texmf/ptex/platex/base/pl209.def
+Entering pLaTeX 2.09 compatibility mode.
+(/usr/share/texmf-dist/tex/latex/base/latex209.def
+File: latex209.def 1998/05/13 v0.52 Standard LaTeX file
+
+
+          Entering LaTeX 2.09 COMPATIBILITY MODE
+ *************************************************************
+    !!WARNING!!    !!WARNING!!    !!WARNING!!    !!WARNING!!   
+ 
+ This mode attempts to provide an emulation of the LaTeX 2.09
+ author environment so that OLD documents can be successfully
+ processed. It should NOT be used for NEW documents!
+ 
+ New documents should use Standard LaTeX conventions and start
+ with the \documentclass command.
+ 
+ Compatibility mode is UNLIKELY TO WORK with LaTeX 2.09 style
+ files that change any internal macros, especially not with
+ those that change the FONT SELECTION or OUTPUT ROUTINES.
+ 
+ Therefore such style files MUST BE UPDATED to use
+          Current Standard LaTeX: LaTeX2e.
+ If you suspect that you may be using such a style file, which
+ is probably very, very old by now, then you should attempt to
+ get it updated by sending a copy of this error message to the
+ author of that file.
+ *************************************************************
+
+\footheight=\dimen118
+\@maxsep=\dimen119
+\@dblmaxsep=\dimen120
+\@cla=\count81
+\@clb=\count82
+\mscount=\count83
+(/usr/share/texmf-dist/tex/latex/base/tracefnt.sty
+Package: tracefnt 1997/05/29 v3.0j Standard LaTeX package (font tracing)
+\tracingfonts=\count84
+LaTeX Info: Redefining \selectfont on input line 101.
+)
+\symbold=\mathgroup4
+\symsans=\mathgroup5
+\symtypewriter=\mathgroup6
+\symitalic=\mathgroup7
+\symsmallcaps=\mathgroup8
+\symslanted=\mathgroup9
+LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 293.
+LaTeX Font Info:    Redeclaring math alphabet \mathsf on input line 294.
+LaTeX Font Info:    Redeclaring math alphabet \mathtt on input line 295.
+LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 301.
+LaTeX Info: Redefining \em on input line 311.
+
+(/usr/share/texmf-dist/tex/latex/base/latexsym.sty
+Package: latexsym 1998/08/17 v2.2e Standard LaTeX package (lasy symbols)
+\symlasy=\mathgroup10
+LaTeX Font Info:    Overwriting symbol font `lasy' in version `bold'
+(Font)                  U/lasy/m/n --> U/lasy/b/n on input line 47.
+)
+LaTeX Font Info:    Redeclaring math delimiter \lgroup on input line 375.
+LaTeX Font Info:    Redeclaring math delimiter \rgroup on input line 377.
+LaTeX Font Info:    Redeclaring math delimiter \bracevert on input line 379.
+)
+(/usr/share/texmf/ptex/platex/base/ptrace.sty
+LaTeX Info: Redefining \selectfont on input line 40.
+\adjust@box=\box41
+\adjust@dimen=\dimen121
+)
+\symmincho=\mathgroup11
+\symgothic=\mathgroup12
+LaTeX Font Info:    Overwriting symbol font `mincho' in version `bold'
+(Font)                  JY1/mc/m/n --> JY1/gt/m/n on input line 59.
+LaTeX Info: Redefining \bf on input line 73.
+LaTeX Info: Redefining \rm on input line 80.
+LaTeX Info: Redefining \sf on input line 81.
+LaTeX Info: Redefining \sl on input line 82.
+LaTeX Info: Redefining \sc on input line 83.
+LaTeX Info: Redefining \it on input line 84.
+LaTeX Info: Redefining \tt on input line 85.
+LaTeX Info: Redefining \em on input line 86.
+)
+Compatibility mode: loading mysoturon.sty rather than mysoturon.cls.
+ (./mysoturon.sty
+Document Style ``卒業論文（日本語用）''. <15 Feb 94>
+\descriptionmargin=\dimen122
+\c@part=\count85
+\c@chapter=\count86
+\c@section=\count87
+\c@subsection=\count88
+\c@subsubsection=\count89
+\c@paragraph=\count90
+\c@subparagraph=\count91
+\c@figure=\count92
+\c@table=\count93
+\leftheadmargin=\dimen123
+\rightheadmargin=\dimen124
+\rightheadoutmargin=\dimen125
+) (/usr/share/texmf/ptex/platex/base/ascmac.sty
+(/usr/share/texmf/ptex/platex/base/tascmac.sty
+\@savetbaselineshift=\dimen126
+\@saveybaselineshift=\dimen127
+\scb@x=\box42
+\scscb@x=\box43
+\@bw=\dimen128
+\@nbox=\box44
+\@nbody=\box45
+\@scw=\dimen129
+\@itemh=\dimen130
+\@iboxpos=\toks15
+\@iboxstr=\box46
+\@bwsp=\box47
+\@@bwsp=\box48
+\@bcal=\count94
+\shaderule=\dimen131
+))
+(/usr/share/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
+\KV@toks@=\toks16
+)
+(/usr/share/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
+)
+(/usr/share/texmf-dist/tex/latex/latexconfig/graphics.cfg
+File: graphics.cfg 2009/08/28 v1.8 graphics configuration of TeX Live
+)
+Package graphics Info: Driver file: dvips.def on input line 91.
+
+(/usr/share/texmf-dist/tex/latex/graphics/dvips.def
+File: dvips.def 1999/02/16 v3.0i Driver-dependant file (DPC,SPQR)
+))
+\Gin@req@height=\dimen132
+\Gin@req@width=\dimen133
+)
+(/usr/share/texmf-dist/tex/latex/psfrag/psfrag.sty
+Package: psfrag 1998/04/11 v3.04 PSfrag (MCG)
+\pfg@pcount=\count95
+\pfg@scount=\count96
+\pfg@temp=\write3
+)
+(/usr/share/texmf-dist/tex/latex/subfigure/subfigure.sty
+Package: subfigure 2002/03/15 v2.1.5 subfigure package
+
+
+Package subfigure Warning: Your document class has a bad definition
+ of \endfigure, most likely
+ \let\endfigure=\end@float
+ which has now been changed to
+ \def\endfigure{\end@float}
+ because otherwise subsequent changes to \end@float
+ (like done by several packages changing float behaviour)
+ can't take effect on \endfigure.
+ Please complain to your document class author.
+
+
+Package subfigure Warning: Your document class has a bad definition
+ of \endtable, most likely
+ \let\endtable=\end@float
+ which has now been changed to
+ \def\endtable{\end@float}
+ because otherwise subsequent changes to \end@float
+ (like done by several packages changing float behaviour)
+ can't take effect on \endtable.
+ Please complain to your document class author.
+
+\subfigtopskip=\skip41
+\subfigcapskip=\skip42
+\subfigcaptopadj=\dimen134
+\subfigbottomskip=\skip43
+\subfigcapmargin=\dimen135
+\subfiglabelskip=\skip44
+\c@subfigure=\count97
+\c@lofdepth=\count98
+\c@subtable=\count99
+\c@lotdepth=\count100
+****************************************
+* Local config file subfigure.cfg used *
+****************************************
+(/usr/share/texmf-dist/tex/latex/subfigure/subfigure.cfg)
+\subfig@top=\skip45
+\subfig@bottom=\skip46
+)
+(/usr/share/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2000/07/18 v2.13 AMS math features
+\@mathmargin=\skip47
+
+For additional information on amsmath, use the `?' option.
+(/usr/share/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2000/06/29 v2.01
+
+(/usr/share/texmf-dist/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0
+\@emptytoks=\toks17
+\ex@=\dimen136
+))
+(/usr/share/texmf-dist/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d
+\pmbraise@=\dimen137
+)
+(/usr/share/texmf-dist/tex/latex/amsmath/amsopn.sty
+Package: amsopn 1999/12/14 v2.01 operator names
+)
+\inf@bad=\count101
+LaTeX Info: Redefining \frac on input line 211.
+\uproot@=\count102
+\leftroot@=\count103
+LaTeX Info: Redefining \overline on input line 307.
+\classnum@=\count104
+\DOTSCASE@=\count105
+LaTeX Info: Redefining \ldots on input line 379.
+LaTeX Info: Redefining \dots on input line 382.
+LaTeX Info: Redefining \cdots on input line 467.
+\Mathstrutbox@=\box49
+\strutbox@=\box50
+\big@size=\dimen138
+LaTeX Font Info:    Redeclaring font encoding OML on input line 567.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 568.
+\macc@depth=\count106
+\c@MaxMatrixCols=\count107
+\dotsspace@=\muskip10
+\c@parentequation=\count108
+\dspbrk@lvl=\count109
+\tag@help=\toks18
+\row@=\count110
+\column@=\count111
+\maxfields@=\count112
+\andhelp@=\toks19
+\eqnshift@=\dimen139
+\alignsep@=\dimen140
+\tagshift@=\dimen141
+\tagwidth@=\dimen142
+\totwidth@=\dimen143
+\lineht@=\dimen144
+\@envbody=\toks20
+\multlinegap=\skip48
+\multlinetaggap=\skip49
+\mathdisplay@stack=\toks21
+LaTeX Info: Redefining \[ on input line 2666.
+LaTeX Info: Redefining \] on input line 2667.
+)
+(/usr/share/texmf-dist/tex/latex/multirow/multirow.sty
+\bigstrutjot=\dimen145
+) (./main.aux)
+\openout1 = `main.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 4.
+LaTeX Font Info:    ... okay on input line 4.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 4.
+LaTeX Font Info:    ... okay on input line 4.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 4.
+LaTeX Font Info:    ... okay on input line 4.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 4.
+LaTeX Font Info:    ... okay on input line 4.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 4.
+LaTeX Font Info:    ... okay on input line 4.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 4.
+LaTeX Font Info:    ... okay on input line 4.
+LaTeX Font Info:    Checking defaults for JY1/mc/m/n on input line 4.
+LaTeX Font Info:    ... okay on input line 4.
+LaTeX Font Info:    Checking defaults for JT1/mc/m/n on input line 4.
+LaTeX Font Info:    ... okay on input line 4.
+
+(./cover/cover.tex
+LaTeX Font Info:    Try loading font information for U+lasy on input line 6.
+ (/usr/share/texmf-dist/tex/latex/base/ulasy.fd
+File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
+) [0
+
+])
+LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <24.88> not available
+(Font)              Font shape `JT1/gt/m/n' tried instead on input line 12.
+LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <24.88> not available
+(Font)              Font shape `JY1/gt/m/n' tried instead on input line 12.
+
+(./main.toc
+LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <12> not available
+(Font)              Font shape `JT1/gt/m/n' tried instead on input line 1.
+LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <12> not available
+(Font)              Font shape `JY1/gt/m/n' tried instead on input line 1.
+ [1
+
+])
+\tf@toc=\write4
+\openout4 = `main.toc'.
+
+ [2] (./chapter1/chapter1.tex
+第 1 章
+LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <17.28> not available
+(Font)              Font shape `JT1/gt/m/n' tried instead on input line 9.
+LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <17.28> not available
+(Font)              Font shape `JY1/gt/m/n' tried instead on input line 9.
+LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <14.4> not available
+(Font)              Font shape `JT1/gt/m/n' tried instead on input line 10.
+LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <14.4> not available
+(Font)              Font shape `JY1/gt/m/n' tried instead on input line 10.
+[1
+
+]
+
+LaTeX Warning: Citation `1' on page 2 undefined on input line 13.
+
+[2]) (./chapter2/chapter2.tex [3]
+第 2 章
+
+LaTeX Warning: Citation `2' on page 4 undefined on input line 6.
+
+[4
+
+]
+
+LaTeX Warning: Citation `3' on page 5 undefined on input line 8.
+
+File: ./chapter2/lab.eps Graphic file (type eps)
+\openout3 = `main.pfg'.
+
+<psfrag:./chapter2/lab.eps> (./main.pfg) <./chapter2/lab.eps> [5]
+
+LaTeX Warning: Reference `fig:lab2' on page 6 undefined on input line 22.
+
+
+LaTeX Warning: Reference `fig:lab2' on page 6 undefined on input line 22.
+
+File: ./lab.eps Graphic file (type eps)
+\openout3 = `main.pfg'.
+
+<psfrag:./lab.eps> (./main.pfg) <./lab.eps>
+File: ./lab2.eps Graphic file (type eps)
+\openout3 = `main.pfg'.
+
+ <psfrag:./lab2.eps> (./main.pfg)
+<./lab2.eps>
+
+LaTeX Warning: Reference `fig:lab2' on page 6 undefined on input line 48.
+
+
+LaTeX Warning: Reference `fig:lab2' on page 6 undefined on input line 48.
+
+[6] [7]
+
+LaTeX Warning: Citation `4' on page 8 undefined on input line 56.
+
+
+LaTeX Warning: Citation `5' on page 8 undefined on input line 65.
+
+[8] [9]) (./chapter3/chapter3.tex [10]
+第 3 章
+File: ./chapter2/red.eps Graphic file (type eps)
+\openout3 = `main.pfg'.
+
+<psfrag:./chapter2/red.eps> (./main.pfg) <./chapter2/red.eps>
+File: ./chapter2/blue.eps Graphic file (type eps)
+\openout3 = `main.pfg'.
+
+
+<psfrag:./chapter2/blue.eps> (./main.pfg) <./chapter2/blue.eps> [11
+
+]
+File: ./chapter2/red_gra.eps Graphic file (type eps)
+\openout3 = `main.pfg'.
+
+
+<psfrag:./chapter2/red_gra.eps> (./main.pfg) <./chapter2/red_gra.eps>
+File: ./chapter2/blue_gra.eps Graphic file (type eps)
+\openout3 = `main.pfg'.
+
+
+<psfrag:./chapter2/blue_gra.eps> (./main.pfg) <./chapter2/blue_gra.eps>
+
+LaTeX Warning: Reference `fig:color_gra' on page 12 undefined on input line 59.
+
+
+File: ./chapter2/red_gra2.eps Graphic file (type eps)
+\openout3 = `main.pfg'.
+
+<psfrag:./chapter2/red_gra2.eps> (./main.pfg) <./chapter2/red_gra2.eps>
+File: ./chapter2/blue_gra2.eps Graphic file (type eps)
+\openout3 = `main.pfg'.
+
+
+<psfrag:./chapter2/blue_gra2.eps> (./main.pfg) <./chapter2/blue_gra2.eps>
+
+LaTeX Warning: Reference `fig:color_gra2' on page 12 undefined on input line 88
+.
+
+
+LaTeX Warning: Reference `fig:color_gra' on page 12 undefined on input line 89.
+
+
+[12]
+
+LaTeX Warning: Reference `fig:color_gra' on page 13 undefined on input line 94.
+
+
+File: ./chapter2/1.eps Graphic file (type eps)
+\openout3 = `main.pfg'.
+
+<psfrag:./chapter2/1.eps> (./main.pfg) <./chapter2/1.eps> [13]
+File: ./chapter2/2.eps Graphic file (type eps)
+\openout3 = `main.pfg'.
+
+
+<psfrag:./chapter2/2.eps> (./main.pfg) <./chapter2/2.eps> [14] [15] [16]
+File: ./convert.eps Graphic file (type eps)
+\openout3 = `main.pfg'.
+
+
+<psfrag:./convert.eps> (./main.pfg) <./convert.eps> [17])
+(./chapter4/chapter4.tex [18]
+第 4 章
+[19
+
+]
+File: 1.eps Graphic file (type eps)
+\openout3 = `main.pfg'.
+
+ <psfrag:1.eps> (./main.pfg) <1.eps>
+File: 2.eps Graphic file (type eps)
+\openout3 = `main.pfg'.
+
+ <psfrag:2.eps> (./main.pfg) <2.eps>
+File: 5.eps Graphic file (type eps)
+\openout3 = `main.pfg'.
+
+
+<psfrag:5.eps> (./main.pfg) <5.eps>
+File: 6.eps Graphic file (type eps)
+\openout3 = `main.pfg'.
+
+ <psfrag:6.eps> (./main.pfg) <6.eps>
+File: 3.eps Graphic file (type eps)
+\openout3 = `main.pfg'.
+
+
+<psfrag:3.eps> (./main.pfg) <3.eps>
+File: 4.eps Graphic file (type eps)
+\openout3 = `main.pfg'.
+
+ <psfrag:4.eps> (./main.pfg) <4.eps>
+[20] [21]
+File: ./range1.eps Graphic file (type eps)
+\openout3 = `main.pfg'.
+
+ <psfrag:./range1.eps> (./main.pfg) <./range1.eps>
+File: ./range2.eps Graphic file (type eps)
+\openout3 = `main.pfg'.
+
+
+<psfrag:./range2.eps> (./main.pfg) <./range2.eps>
+File: ./range5.eps Graphic file (type eps)
+\openout3 = `main.pfg'.
+
+ <psfrag:./range5.eps>
+(./main.pfg) <./range5.eps>
+File: ./range6.eps Graphic file (type eps)
+\openout3 = `main.pfg'.
+
+ <psfrag:./range6.eps> (./main.pfg) <./range6.eps>
+[22]
+File: ./range3.eps Graphic file (type eps)
+\openout3 = `main.pfg'.
+
+ <psfrag:./range3.eps> (./main.pfg) <./range3.eps>
+File: ./range4.eps Graphic file (type eps)
+\openout3 = `main.pfg'.
+
+ <psfrag:./range4.eps>
+(./main.pfg) <./range4.eps> [23]
+File: 1_1.eps Graphic file (type eps)
+\openout3 = `main.pfg'.
+
+ <psfrag:1_1.eps> (./main.pfg) <1_1.eps>
+File: 2_1.eps Graphic file (type eps)
+\openout3 = `main.pfg'.
+
+
+<psfrag:2_1.eps> (./main.pfg) <2_1.eps> [24]
+
+LaTeX Warning: Reference `fig:seininlab' on page 25 undefined on input line 241
+.
+
+
+LaTeX Warning: Reference `fig:kinninlab' on page 25 undefined on input line 241
+.
+
+File: 1_2.eps Graphic file (type eps)
+\openout3 = `main.pfg'.
+
+<psfrag:1_2.eps> (./main.pfg) <1_2.eps>
+File: 2_2.eps Graphic file (type eps)
+\openout3 = `main.pfg'.
+
+ <psfrag:2_2.eps> (./main.pfg)
+<2_2.eps> [25]
+
+LaTeX Warning: Reference `fig:matuhsv' on page 26 undefined on input line 284.
+
+
+LaTeX Warning: Reference `fig:torihsv' on page 26 undefined on input line 284.
+
+File: 5_1.eps Graphic file (type eps)
+\openout3 = `main.pfg'.
+
+<psfrag:5_1.eps> (./main.pfg) <5_1.eps>
+File: 6_1.eps Graphic file (type eps)
+\openout3 = `main.pfg'.
+
+ <psfrag:6_1.eps> (./main.pfg)
+<6_1.eps> [26]
+
+LaTeX Warning: Reference `fig:matulab' on page 27 undefined on input line 322.
+
+
+LaTeX Warning: Reference `fig:torilab' on page 27 undefined on input line 322.
+
+File: 5_2.eps Graphic file (type eps)
+\openout3 = `main.pfg'.
+
+<psfrag:5_2.eps> (./main.pfg) <5_2.eps>
+File: 6_2.eps Graphic file (type eps)
+\openout3 = `main.pfg'.
+
+ <psfrag:6_2.eps> (./main.pfg)
+<6_2.eps> [27]
+
+LaTeX Warning: Reference `fig:jpnhsv' on page 28 undefined on input line 362.
+
+
+LaTeX Warning: Reference `fig:seinunohsv' on page 28 undefined on input line 36
+2.
+
+File: 3_1.eps Graphic file (type eps)
+\openout3 = `main.pfg'.
+
+<psfrag:3_1.eps> (./main.pfg) <3_1.eps>
+File: 4_1.eps Graphic file (type eps)
+\openout3 = `main.pfg'.
+
+ <psfrag:4_1.eps> (./main.pfg)
+<4_1.eps> [28]
+
+LaTeX Warning: Reference `fig:jpnlab' on page 29 undefined on input line 403.
+
+
+LaTeX Warning: Reference `fig:seinunolab' on page 29 undefined on input line 40
+3.
+
+File: 3_2.eps Graphic file (type eps)
+\openout3 = `main.pfg'.
+
+<psfrag:3_2.eps> (./main.pfg) <3_2.eps>
+File: 4_2.eps Graphic file (type eps)
+\openout3 = `main.pfg'.
+
+ <psfrag:4_2.eps> (./main.pfg)
+<4_2.eps>) (./chapter5/chapter5.tex [29]
+第 5 章
+File: ./i.eps Graphic file (type eps)
+\openout3 = `main.pfg'.
+
+<psfrag:./i.eps> (./main.pfg) <./i.eps>
+File: ./ii.eps Graphic file (type eps)
+\openout3 = `main.pfg'.
+
+ <psfrag:./ii.eps> (./main.pfg)
+<./ii.eps> [30
+
+] [31]
+File: ./chapter5/1_gra.eps Graphic file (type eps)
+\openout3 = `main.pfg'.
+
+ <psfrag:./chapter5/1_gra.eps> (./main.pfg)
+<./chapter5/1_gra.eps>
+File: ./chapter5/2_gra.eps Graphic file (type eps)
+\openout3 = `main.pfg'.
+
+ <psfrag:./chapter5/2_gra.eps> (./main.pfg)
+<./chapter5/2_gra.eps> [32]
+File: ./chapter5/7_gra.eps Graphic file (type eps)
+\openout3 = `main.pfg'.
+
+ <psfrag:./chapter5/7_gra.eps> (./main.pfg)
+<./chapter5/7_gra.eps>
+File: ./chapter5/8_gra.eps Graphic file (type eps)
+\openout3 = `main.pfg'.
+
+ <psfrag:./chapter5/8_gra.eps> (./main.pfg)
+<./chapter5/8_gra.eps> [33]
+File: ./iii.eps Graphic file (type eps)
+\openout3 = `main.pfg'.
+
+ <psfrag:./iii.eps> (./main.pfg) <./iii.eps>
+File: ./iv.eps Graphic file (type eps)
+\openout3 = `main.pfg'.
+
+
+<psfrag:./iv.eps> (./main.pfg) <./iv.eps> [34]
+File: ./chapter5/3_gra.eps Graphic file (type eps)
+\openout3 = `main.pfg'.
+
+ <psfrag:./chapter5/3_gra.eps>
+(./main.pfg) <./chapter5/3_gra.eps>
+File: ./chapter5/4_gra.eps Graphic file (type eps)
+\openout3 = `main.pfg'.
+
+ <psfrag:./chapter5/4_gra.eps> (./main.pfg)
+<./chapter5/4_gra.eps> [35]
+File: ./chapter5/9_gra.eps Graphic file (type eps)
+\openout3 = `main.pfg'.
+
+ <psfrag:./chapter5/9_gra.eps> (./main.pfg)
+<./chapter5/9_gra.eps>
+File: ./chapter5/10_gra.eps Graphic file (type eps)
+\openout3 = `main.pfg'.
+
+ <psfrag:./chapter5/10_gra.eps> (./main.pfg)
+<./chapter5/10_gra.eps> [36]
+File: ./v.eps Graphic file (type eps)
+\openout3 = `main.pfg'.
+
+ <psfrag:./v.eps> (./main.pfg) <./v.eps>
+File: ./vi.eps Graphic file (type eps)
+\openout3 = `main.pfg'.
+
+
+<psfrag:./vi.eps> (./main.pfg) <./vi.eps> [37]
+File: ./chapter5/5_gra.eps Graphic file (type eps)
+\openout3 = `main.pfg'.
+
+ <psfrag:./chapter5/5_gra.eps>
+(./main.pfg) <./chapter5/5_gra.eps>
+File: ./chapter5/6_gra.eps Graphic file (type eps)
+\openout3 = `main.pfg'.
+
+ <psfrag:./chapter5/6_gra.eps> (./main.pfg)
+<./chapter5/6_gra.eps> [38]
+File: ./chapter5/11_gra.eps Graphic file (type eps)
+\openout3 = `main.pfg'.
+
+ <psfrag:./chapter5/11_gra.eps> (./main.pfg)
+<./chapter5/11_gra.eps>
+File: ./chapter5/12_gra.eps Graphic file (type eps)
+\openout3 = `main.pfg'.
+
+ <psfrag:./chapter5/12_gra.eps> (./main.pfg)
+<./chapter5/12_gra.eps> [39] [40]) (./chapter6/chapter6.tex [41]
+第 6 章
+) (./thanks.tex [42
+
+] [43]) (./sanko.tex [44
+
+]) [45
+
+] (./main.aux)
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 1898 strings out of 494225
+ 21767 string characters out of 3161900
+ 78502 words of memory out of 3000000
+ 5002 multiletter control sequences out of 15000+200000
+ 23136 words of font info for 90 fonts, out of 3000000 for 9000
+ 714 hyphenation exceptions out of 8191
+ 31i,13n,24p,1051b,608s stack positions out of 5000i,500n,10000p,200000b,50000s
+
+Output written on main.dvi (48 pages, 98540 bytes).
