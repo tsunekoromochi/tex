@@ -1,0 +1,438 @@
+\chapter{実験}
+
+%\section{実験方法}
+本研究では、Lab空間で色変換された画像について、比較、分析を行う。この章では、Lab空間でL*、a*、b*の値での標準偏差を用いた変換、グラデーションプレートを用いた変換においての手順を示す。
+
+\section{実験方法}
+実験では、対になる画像を用意し、一方を対象画像、もう一方を参照画像と定義し、参照画像から抽出した色の特徴量をもとに、対象画像の色変換を行う。
+
+\subsection{使用する画像}
+　以下の図4.1〜4.6に用意した画像を列挙する。文中では画像iなどの画像番号でそれぞれの画像を呼ぶことにする。
+\newpage
+
+\begin{figure}[htbp]
+  \begin{center}
+    \begin{tabular}{c}
+
+      % 1
+      \begin{minipage}{0.45\hsize}
+        \begin{center}
+          \includegraphics[clip, width=5.5cm]{1.eps}
+          %\hspace{1.6cm}
+          \caption{画像i:西洋人参}
+          \label{fig:seiyou}
+        \end{center}
+      \end{minipage}
+
+      % 2
+      \begin{minipage}{0.45\hsize}
+        \begin{center}
+          \includegraphics[clip, width=5.5cm]{2.eps}
+          %\hspace{1.6cm}
+          \caption{画像ii:金時人参}
+          \label{fig:kintoki}
+        \end{center}
+      \end{minipage}
+
+    \end{tabular}
+  \end{center}
+\end{figure}
+\par
+画像iの特徴は人参として赤みがありおいしそうなイメージを持っている。画像全体のイメージとしては明るくて鮮やかなイメージを持つ。\par
+画像iiの特徴は人参としてオレンジがかっており、よく家庭で見られる日本的なイメージを持っている。画像全体のイメージとしては画像i程ではないが明るい感じであり、落ち着いた感じのイメージを持つ。\par
+
+
+\begin{figure}[htbp]
+  \begin{center}
+    \begin{tabular}{c}
+% 1
+      \begin{minipage}{0.45\hsize}
+        \begin{center}
+          \includegraphics[clip, width=4.0cm ]{5.eps}
+          %\hspace{1.6cm}
+          \caption{画像iii:松と橋}
+          \label{fig:matu}
+        \end{center}
+      \end{minipage}
+
+      % 2
+      \begin{minipage}{0.45\hsize}
+        \begin{center}
+          \includegraphics[clip, width=4.0cm ]{6.eps}
+          %\hspace{1.6cm}
+          \caption{画像iv:鳥と雲}
+          \label{fig:tori}
+        \end{center}
+      \end{minipage}  
+ 
+    \end{tabular}
+  \end{center}
+\end{figure}
+画像iiiの特徴は明るく赤みが強いイメージを持ち、暖かみがあるイメージを持っている。画像全体のイメージとしては派手で豪華な感じのイメージを持つ。\par
+画像ivの特徴は背景は暗い感じではあるが真ん中のピンク色の雲は鮮やかできれいな感じのイメージを持っている。画像全体のイメージとして優しいイメージを持つ。\par
+
+\begin{figure}[htbp]
+  \begin{center}
+    \begin{tabular}{c}
+% 1
+      \begin{minipage}{0.45\hsize}
+        \begin{center}
+          \includegraphics[clip, width=4.0cm]{3.eps}
+          %\hspace{1.6cm}
+          \caption{画像v:日本の帯}
+          \label{fig:jpn}
+        \end{center}
+      \end{minipage}
+
+      % 2
+      \begin{minipage}{0.45\hsize}
+        \begin{center}
+          \includegraphics[clip, width=4.0cm ]{4.eps}
+          %\hspace{1.6cm}
+          \caption{画像vi:西洋の布地}
+          \label{fig:seinuno}
+        \end{center}
+      \end{minipage}
+
+
+    \end{tabular}
+  \end{center}
+\end{figure}
+画像vの特徴は赤っぽく派手で迫力のあるイメージを持っている。画像全体のイメージとして昔の日本にある高価で豪華な派手な印象を持つイメージを持つ。\par
+画像viの特徴は淡くて渋く、図4.5とは真逆のイメージを持つ。画像全体のイメージとしては色が全体的に薄く淡いといったイメージを持っている。\par
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newpage
+色変換はグラデーションを特徴づける断面をグラデーションプレートとして、色変換を行うことが前提である。以下の図4.7〜4.12にそれぞれの画像の特徴領域を示す。\par
+
+\begin{figure}[htbp]
+  \begin{center}
+    \begin{tabular}{c}
+
+      % 1
+      \begin{minipage}{0.45\hsize}
+        \begin{center}
+          \includegraphics[clip]{./range1.eps}
+          %\hspace{1.6cm}
+          \caption{西洋人参の特徴領域}
+          \label{fig:seiyou}
+        \end{center}
+      \end{minipage}
+
+        % 1
+      \begin{minipage}{0.45\hsize}
+        \begin{center}
+          \includegraphics[clip]{./range2.eps}
+          %\hspace{1.6cm}
+          \caption{金時人参の特徴領域}
+          \label{fig:seiyou}
+        \end{center}
+      \end{minipage}
+
+    \end{tabular}
+  \end{center}
+\end{figure}
+図4.7は人参として赤みがあり、明るくて鮮やかなイメージを持つといったことから人参の赤色の一部を特徴領域として切り出し、図4.8は人参としてオレンジがかっており、明るく落ち着いた感じのイメージを持つといったことから人参のオレンジ色の一部を特徴領域として切り出した。人参には光の光沢や影があることから特徴領域にもそれらを含むこととした。\par
+ 
+\begin{figure}[htbp]
+  \begin{center}
+    \begin{tabular}{c}
+    
+ \begin{minipage}{0.45\hsize}
+        \begin{center}
+          \includegraphics[clip, width=3.0cm]{./range5.eps}
+          %\hspace{1.6cm}
+          \caption{松と橋の特徴領域}
+          \label{fig:seiyou}
+        \end{center}
+      \end{minipage}
+
+        % 1
+      \begin{minipage}{0.45\hsize}
+        \begin{center}
+          \includegraphics[clip, width=3.0cm]{./range6.eps}
+          %\hspace{1.6cm}
+          \caption{鳥と雲の特徴領域}
+          \label{fig:seiyou}
+        \end{center}
+      \end{minipage}
+
+      \end{tabular}
+  \end{center}
+\end{figure}
+図4.9は明るく赤みが強く派手で豪華な感じのイメージを持つといったことから派手な赤色の一部を特徴領域として切り出し、図4.10は真ん中のピンク色の雲は鮮やかできれいな感じのイメージを持つといったことから優しいイメージを持つピンク色の一部を特徴領域として切り出した。\par
+
+\newpage
+\begin{figure}[htbp]
+  \begin{center}
+    \begin{tabular}{c}
+
+      \begin{minipage}{0.45\hsize}
+        \begin{center}
+          \includegraphics[clip, width=3.0cm]{./range3.eps}
+          %\hspace{1.6cm}
+          \caption{日本帯の特徴領域}
+          \label{fig:seiyou}
+        \end{center}
+      \end{minipage}
+
+        % 1
+      \begin{minipage}{0.45\hsize}
+        \begin{center}
+          \includegraphics[clip, width=3.0cm]{./range4.eps}
+          %\hspace{1.6cm}
+          \caption{西洋の布地の特徴領域}
+          \label{fig:seiyou}
+        \end{center}
+      \end{minipage}
+
+
+    \end{tabular}
+  \end{center}
+\end{figure}
+
+図4.11は赤っぽく派手で豪華なイメージを持つといったことから派手で豪華な赤色のイメージを持つ絵柄の一部を特徴領域として切り出し、図4.12は淡くて渋く、色が全体的に薄く淡いといったイメージを持つといったことから淡くて渋い絵柄の一部を特徴領域として切り出した。\par
+
+\newpage
+\section{実験結果}
+本研究では、[画像i,画像ii]、[画像iii,画像iv]、[画像v,画像vi]の３つの対になる画像について、L*、a*、b*の値での標準偏差を用いた変換とグラデーションプレートを用いた変換それぞれで色変換を行う。以下にそれぞれの組みでの実験結果を示す。
+
+\subsection{[画像i,画像ii]での実験結果}
+\subsubsection{L*、a*、b*の値での標準偏差を用いた色変換}
+以下の図4.13、図4.14に標準偏差での色変換後の画像i、画像iiを示す。
+
+
+\begin{figure}[htbp]
+  \begin{center}
+    \begin{tabular}{c}
+
+      % 1
+      \begin{minipage}{0.45\hsize}
+        \begin{center}
+          \includegraphics[clip, width=5.5cm]{1_1.eps}
+          %\hspace{1.6cm}
+          \caption{画像vii:変換後の画像i}
+          \label{fig:seininhsv}
+        \end{center}
+      \end{minipage}
+
+      % 2
+      \begin{minipage}{0.45\hsize}
+        \begin{center}
+          \includegraphics[clip, width=5.5cm ]{2_1.eps}
+          %\hspace{1.6cm}
+          \caption{画像viii:変換後の画像ii}
+          \label{fig:kinninhsv}
+        \end{center}
+      \end{minipage}
+
+
+    \end{tabular}
+  \end{center}
+\end{figure}
+
+画像viiは、画像iを対象画像、画像iiを参照画像として、画像iに色変換を施したものである。参照画像の特徴領域のグラデーションであるオレンジ色に近づけることができている。しかし、全体的に明るさの強弱が激しくコントラストが強いイメージを持つ。\par
+画像viiiは、画像iiを対象画像、画像iを参照画像として、画像iiに色変換を施したものである。参照画像の特徴領域のグラデーションである赤色に近づけることができている。しかし、全体的に色が薄く、ぼんやりとしたイメージを持つ。\par
+これらより、対象画像と参照画像のL*（明度）の標準偏差の値が大きすぎることからL*の値を変換する際において、大きく値が変換されてしまったと予測される。
+
+
+\newpage
+\subsubsection{グラデーションプレートに基づく色変換}
+以下の図\ref{fig:seininlab}、図\ref{fig:kinninlab}にグラデーションプレートを用いた変換後の画像i、画像iiを示す。
+
+
+\begin{figure}[h]
+  \begin{center}
+    \begin{tabular}{c}
+
+      % 1
+      \begin{minipage}{0.45\hsize}
+        \begin{center}
+          \includegraphics[clip, width=5.5cm]{1_2.eps}
+          %\hspace{1.6cm}
+          \caption{画像ix:変換後の画像i}
+          \label{fig:seininlab}
+        \end{center}
+      \end{minipage}
+
+      % 2
+      \begin{minipage}{0.45\hsize}
+        \begin{center}
+          \includegraphics[clip, width=5.5cm ]{2_2.eps}
+          %\hspace{1.6cm}
+          \caption{画像x:変換後の画像ii}
+          \label{fig:kinninlab}
+        \end{center}
+      \end{minipage}
+
+
+    \end{tabular}
+  \end{center}
+\end{figure}
+
+画像ixは、画像iを対象画像、画像iiを参照画像として、画像iに色変換を施したものである。参照画像のオレンジ色に近づけることができている。画像viiと比べると明るさの強弱が激しくコントラストが強いイメージだったものが無くなり、落ち着いたイメージを持つ。\par
+画像xは、画像iiを対象画像、画像iを参照画像として、画像iiに色変換を施したものである。参照画像の赤色に近づけることができている。画像viiiと比べると、画像全体がぼんやりとしていたものがはっきりとした色合いになり、明るく鮮やかなイメージを持つ。\par
+これより、グラデーションプレートを用いることで、色分布の偏りが大きく反映されてしまっていた従来法の色変換より色変換に大きな影響がでないことがわかる。
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newpage
+
+\subsection{[画像iii,画像iv]での実験結果}
+\subsubsection{L*、a*、b*の値での標準偏差を用いた色変換}
+以下の図\ref{fig:matuhsv}、図\ref{fig:torihsv}に標準偏差での色変換後の画像iii、画像ivを示す。
+
+\begin{figure}[htbp]
+  \begin{center}
+    \begin{tabular}{c}
+
+      % 1
+      \begin{minipage}{0.45\hsize}
+        \begin{center}
+          \includegraphics[clip, width=4.0cm]{5_1.eps}
+          %\hspace{1.6cm}
+          \caption{画像xi:変換後の画像iii}
+          \label{fig:matuhsv}
+        \end{center}
+      \end{minipage}
+
+      % 2
+      \begin{minipage}{0.45\hsize}
+        \begin{center}
+          \includegraphics[clip, width=4.0cm ]{6_1.eps}
+          %\hspace{1.6cm}
+          \caption{画像xii:変換後の画像iv}
+          \label{fig:torihsv}
+        \end{center}
+      \end{minipage}
+
+
+    \end{tabular}
+  \end{center}
+\end{figure}
+
+画像xiは、画像iiiを対象画像、画像ivを参照画像として、画像iiiに色変換を施したものである。参照画像の特徴領域のグラデーションであるピンク色に近づけることができている。しかし、特徴領域の部分以外の部分までもピンク色になっており、画像全体までも薄くピンク色になってしまっている。\par
+画像xiiは、画像ivを対象画像、画像iiiを参照画像として、画像ivに色変換を施したものである。参照画像の特徴領域のグラデーションである赤色に近づけることができている。しかし、特徴領域はきちんと赤色になってはいるが、少し理想の色とは言いがたい。また、画像全体が緑色っぽくなっている。\par
+これらより、対象画像と参照画像のb*の標準偏差の値が大きすぎることからbの値を変換する際において、大きく値が変換されてしまったと予測される。
+
+\newpage
+
+\subsubsection{グラデーションプレートに基づく色変換}
+以下の図\ref{fig:matulab}、図\ref{fig:torilab}にグラデーションプレートを用いた色変換後の画像iii、画像ivを示す。
+
+\begin{figure}[htbp]
+  \begin{center}
+    \begin{tabular}{c}
+
+      % 1
+      \begin{minipage}{0.45\hsize}
+        \begin{center}
+          \includegraphics[clip, width=4.0cm]{5_2.eps}
+          %\hspace{1.6cm}
+          \caption{画像xiii:変換後の画像iii}
+          \label{fig:matulab}
+        \end{center}
+      \end{minipage}
+
+      % 2
+      \begin{minipage}{0.45\hsize}
+        \begin{center}
+          \includegraphics[clip, width=4.0cm ]{6_2.eps}
+          %\hspace{1.6cm}
+          \caption{画像xiv:変換後の画像iv}
+          \label{fig:torilab}
+        \end{center}
+      \end{minipage}
+
+
+    \end{tabular}
+  \end{center}
+\end{figure}
+
+
+画像xiiiは、画像iiiを対象画像、画像ivを参照画像として、画像iiiに色変換を施したものである。参照画像のピンク色に近づけることができている。画像xiと比べると画像全体までもピンク色になっており、薄い感じになっていた問題が無くなり、画像全体がはっきりとした色合いになり優しいイメージを持つようになった。\par
+画像xivは、画像ivを対象画像、画像iiiを参照画像として、画像ivに色変換を施したものである。参照画像の赤色に近づけることができている。画像xiiと比べると、画像全体が緑色になっておらず、赤色に変換される部分も理想的な赤色になっていることにより少し派手さが増した。\par
+これより、グラデーションプレートを用いることで、先ほどと同様に、色分布の偏りが大きく反映されてしまっていた従来法の色変換より色変換に大きな影響がでないことがわかる。
+
+
+\newpage
+\subsection{[画像v,画像vi]での実験結果}
+\subsubsection{L*、a*、b*の値での標準偏差を用いた色変換}
+以下の図\ref{fig:jpnhsv}、図\ref{fig:seinunohsv}に標準偏差での色変換後の画像v、画像viを示す。
+
+
+\begin{figure}[htbp]
+  \begin{center}
+    \begin{tabular}{c}
+
+      % 1
+      \begin{minipage}{0.45\hsize}
+        \begin{center}
+          \includegraphics[clip, width=4.0cm]{3_1.eps}
+          %\hspace{1.6cm}
+          \caption{画像xv:変換後の画像v}
+          \label{fig:jpnhsv}
+        \end{center}
+      \end{minipage}
+
+      % 2
+      \begin{minipage}{0.45\hsize}
+        \begin{center}
+          \includegraphics[clip, width=4.0cm ]{4_1.eps}
+          %\hspace{1.6cm}
+          \caption{画像xvi:変換後の画像vi}
+          \label{fig:seinunohsv}
+        \end{center}
+      \end{minipage}
+
+
+    \end{tabular}
+  \end{center}
+\end{figure}
+
+
+画像xvは、画像vを対象画像、画像viを参照画像として、画像vに色変換を施したものである。参照画像の特徴領域の淡い色に近づけることができている。この画像は全体的には淡い雰囲気を持つという特徴を持っていたが、それを画像全体に落ち着いた雰囲気を持つように変換されるようになった。\par
+　画像xviは、画像viを対象画像、画像vを参照画像として、画像viに色変換を施したものである。参照画像の特徴領域の明るく派手な色に近づけることができている。この画像は、全体的にに明るい雰囲気を持つという特徴を持っていたが、それを画像全体が明るくなり、派手なイメージを持つように変換された。\par
+これは対象画像と参照画像の特徴領域が単一な色ではないため標準偏差は大きいものと考えられ、先ほどと同様に画像全体にまで色が反映されているが、対象画像も参照画像も画像全体がほぼ同じ絵柄なためあまり、大きな影響は目からは見られにくい。
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+\subsubsection{グラデーションプレートに基づく色変換}
+以下の図\ref{fig:jpnlab}、図\ref{fig:seinunolab}にグラデーションプレートでの色変換後の画像v、画像viを示す。
+
+
+\begin{figure}[htbp]
+  \begin{center}
+    \begin{tabular}{c}
+
+      % 1
+      \begin{minipage}{0.45\hsize}
+        \begin{center}
+          \includegraphics[clip, width=4.0cm]{3_2.eps}
+          %\hspace{1.6cm}
+          \caption{画像xvii:画像v}
+          \label{fig:jpnlab}
+        \end{center}
+      \end{minipage}
+
+      % 2
+      \begin{minipage}{0.45\hsize}
+        \begin{center}
+          \includegraphics[clip, width=4.0cm ]{4_2.eps}
+          %\hspace{1.6cm}
+          \caption{画像xviii:変換後の画像vi}
+          \label{fig:seinunolab}
+        \end{center}
+      \end{minipage}
+
+
+    \end{tabular}
+  \end{center}
+\end{figure}
+
+
+画像xviiは、画像vを対象画像、画像viを参照画像として、画像vに色変換を施したものである。参照画像の特徴領域の淡い色に近づけることができており、画像全体に落ち着いた雰囲気を持つように変換されるようになった。画像xvと比べると、よく似た色変換が施されている。\par
+画像xviiiは、画像viを対象画像、画像vを参照画像として、画像viに色変換を施したものである。参照画像の特徴領域の明るい色に近づけることができているが、画像全体は赤色というより黄色っぽいイメージで画像全体が明るくなっている。赤っぽいイメージに近づけたかったが、それがうまく投影されなかったため、画像xviと比べるとより、うまく変換が施されているとは言いがたい。\par
+これらより、グラデーションプレートを用いることで画像全体のイメージは反映させれることができているが、この場合は特徴領域に単一な色ではなく様々な色を用いると色変換の精度は下がってしまうと考えられる。
