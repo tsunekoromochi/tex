@@ -1,0 +1,190 @@
+\chapter{提案法}
+
+\section{改善案}
+Lab色空間において色相はa*=0、b*=0からの角度により求まる。\par
+以下に全体が赤色と青色におけるx軸がa*、y軸がb*の色空間の色分布を示す。\par
+\begin{figure}[htbp]
+  \begin{center}
+    \begin{tabular}{c}
+
+      % 1
+      \begin{minipage}{0.33\hsize}
+        \begin{center}
+          \includegraphics[clip, width=5.0cm]{./chapter2/red.eps}
+          \hspace{1.6cm} [1]赤
+        \end{center}
+      \end{minipage}
+
+      % 2
+      \begin{minipage}{0.33\hsize}
+        \begin{center}
+          \includegraphics[clip, width=5.0cm]{./chapter2/blue.eps}
+          \hspace{1.6cm} [2]青
+        \end{center}
+      \end{minipage}
+
+    \end{tabular}
+    \caption{色分布を示す色の例}
+    \label{fig:color}
+  \end{center}
+\end{figure}
+
+\newpage
+\begin{figure}[htbp]
+  \begin{center}
+    \begin{tabular}{c}
+
+      % 1
+      \begin{minipage}{0.33\hsize}
+        \begin{center}
+          \includegraphics[clip, width=5.0cm]{./chapter2/red_gra.eps}
+          \hspace{1.6cm} [1]赤
+        \end{center}
+      \end{minipage}
+
+      % 2
+      \begin{minipage}{0.33\hsize}
+        \begin{center}
+          \includegraphics[clip, width=5.0cm]{./chapter2/blue_gra.eps}
+          \hspace{1.6cm} [2]青
+        \end{center}
+      \end{minipage}
+
+    \end{tabular}
+    \caption{Lab色空間におけるab平面}
+    \label{fig:color_gra}
+  \end{center}
+\end{figure}
+
+図\ref{fig:color_gra}より赤はa*の＋、b*の＋の方向に向けて色が分布しており、一方、青はa*の＋、b*の−の方向に向けて色が分布している。\par
+これらの結果から、a*、b*ともに偏りがないため、標準偏差を用いて色変換を行った場合では、a*、b*の値の標準偏差は大きくなる。\par
+
+また、全体が赤色と青色におけるx軸がa*、y軸がL*の色空間の色分布を示す。\par
+\begin{figure}[htbp]
+  \begin{center}
+    \begin{tabular}{c}
+
+      % 1
+      \begin{minipage}{0.33\hsize}
+        \begin{center}
+          \includegraphics[clip, width=5.0cm]{./chapter2/red_gra2.eps}
+          \hspace{1.6cm} [1]赤
+        \end{center}
+      \end{minipage}
+
+      % 2
+      \begin{minipage}{0.33\hsize}
+        \begin{center}
+          \includegraphics[clip, width=5.0cm]{./chapter2/blue_gra2.eps}
+          \hspace{1.6cm} [2]青
+        \end{center}
+      \end{minipage}
+
+    \end{tabular}
+    \caption{Lab色空間におけるLa平面}
+    \label{fig:color_gra2}
+  \end{center}
+\end{figure}
+図\ref{fig:color_gra2}よりL*の値も偏りがないため、標準偏差を用いて色変換を行った場合では、L*の値の標準偏差は大きくなる。\par
+しかし、図\ref{fig:color_gra}よりa*=0、b*=0から対象の色に向かってほとんどの画素が直線的に偏った分布をしていることから、この特徴を生かし新たな変換法を提案する。\par
+
+\newpage
+\section{グラデーションプレートを用いた色変換}
+\subsection{グラデーションプレートについて}
+図\ref{fig:color_gra}からa*=0、b*=0から対象の色に向かって直線的に偏った分布をしている。その直線からL軸に平行に平面を生成することによってLab色空間に対象の色の色分布を含むのグラデーションの平面を生成できることができる。この平面をグラデーションプレートと呼ぶことにする。\par
+\begin{figure}[htbp]
+  \begin{center}
+    \includegraphics[clip,width=7.0cm]{./chapter2/1.eps}
+    \caption{Lab色空間におけるグラデーションプレートの概念図}
+    \label{fig:lab_gainen}
+  \end{center}
+\end{figure}
+
+そして、対象画像の色特徴の色分布から得られたグラデーションプレートを参照画像の色特徴の色分布からも同様に得られたグラデーションプレートとを一致させるように修正することにより対象画像の色分布を参照画像の色分布に近づけることができる。\par
+\newpage
+\begin{figure}[htbp]
+  \begin{center}
+    \includegraphics[clip,width=7.0cm]{./chapter2/2.eps}
+    \caption{グラデーションプレートにおける変換の概念図}
+    \label{fig:lab_gainen}
+  \end{center}
+\end{figure}
+
+この色変換法により偏りがなかったL*、a*、b*の値での標準偏差を用いた色変換よりも、より正確に色変換が行えることが期待できる。\par
+\subsection{変換法}
+グラデーションプレートを所得するために対象画像と参照画像の両方の色変換の対象となる領域を指定し、その色分布からx軸をa*、y軸をb*とする2次元空間上にある直線に垂線を下ろした時の垂線の長さの2乗の総和が最小となる直線を求め、L軸に平行な平面を当てはめることでできる平面をグラデーションプレートとする。\par
+$Lab色空間のa軸をa、b軸をbとしたときの直線b=xaについて考える。点(a_i,b_i)$と平面との距離は$d_i=\frac{|b_i-xa_i|}{\sqrt{x^2+1}}$である。\par
+平面との距離の2乗の総和は
+\begin{eqnarray}
+  Q = \sum d_i = \sum (\frac{b_i-xa_i}{\sqrt{x^2+1}})^2
+\end{eqnarray}
+
+\newpage
+これを最小とする$x$を求めるために$x$について偏微分をする。\par
+\begin{eqnarray}
+  \frac{\partial Q}{\partial x} = \frac{2x}{(x^2+1)^2}\sum a^2 +\frac{2(1-x^2)}{(x^2+1)^2}\sum ab - \frac{2x}{(x^2+1)^2}\sum b_i^2 = 0
+\end{eqnarray}
+
+これらより最小となる$x$は\par
+\begin{eqnarray}
+  x = \frac{-(\sum a_i^2-\sum b_i^2)\pm \sqrt{(\sum a_i^2-\sum b_i^2)^2+4(\sum a_ib_i)^2}}{2\sum a_ib_i }
+\end{eqnarray}
+傾きの正負は色分布における平均のa*、b*の値に依存する。\par
+これにより直線の傾きを得た後、L軸に平面を当てはめることによりグラデーションプレートを得る。\par
+対象画像のグラデーションプレートの傾きから参照画像のグラデーションプレートの傾きに近づけるためには対処画像の各画素のa*、b*から傾きを求め、その傾きから対象画像のグラデーションプレートの傾きを減算し、参照画像のグラデーションプレートの傾きを加算させることにより参照画像のグラデーションプレートの傾きに近づけれる。\par
+$対象画像のグラデーションプレートのx(傾き)をx_o、参照画像のグラデーションプレートのx(傾き)をx_r、変換後のxをx'、対象画像内の一つの色(a,b)としたとき、$次のようにに変換される。
+\begin{eqnarray}
+  && x' = (\frac{b}{a}-x_o)+x_r
+\end{eqnarray}
+
+\newpage
+対象画像のグラデーションプレート上における一つの色(L,a,b)は変換された参照画像のグラデーションプレート上でも同じ位置に位置すると仮定すると以下のように変換される。\par
+一つの色(L,a,b)は変換後もa*=0、b*=0からの距離は変わらないことから、変換後のaをa'とすると、
+\begin{eqnarray}
+  \sqrt{a^2+b^2} &=& \sqrt{a'^2+a'^2x'^2}\\
+  a^2+b^2 &=& a'^2+a'^2x'^2\\
+  a^2+b^2 &=& a'^2(1+x'^2)\\
+  a'^2 &=& \frac{a^2+b^2}{1+x'^2}\\
+  a' &=& \pm\sqrt{\frac{a^2+b^2}{x'^2+1 }}
+\end{eqnarray}
+より変換後のa'が求まる。変換後の正負は参照画像における色分布のaに依存する。\par
+よって変換後のb'は参照画像のグラデーションプレートの傾きにa'を乗算することで求められる。変換後の一つの色を(L',a',b')としたとき結果をまとめると以下のようになる。\par
+\begin{eqnarray}
+  && x' = (x-x_o)+x_r\\
+  && L' = L\\
+  && a' = \sqrt{\frac{a^2+b^2}{x'^2+1 }}\\
+  && b' = x'a'
+\end{eqnarray}
+
+\newpage
+この変換をLab色空間のab平面上で表すと以下の図3.6のようになる。\par
+対象画像のグラデーションプレートの直線の式が$b=xa$、参照画像のグラデーションプレートの直線の式が$b'=x'a'$、ある一つの対象画像における色を($a$,$b$)、色変換後を($a'$,$b'$)とする。\par
+\begin{figure}[htbp]
+  \begin{center}
+    \includegraphics[clip,width=7.0cm]{./convert.eps}
+    \caption{変換過程の概念図}
+    \label{fig:lab_gainen}
+  \end{center}
+\end{figure}
+図3.6より対象画像のグラデーションプレートの直線の式$b=xa$から参照画像のグラデーションプレートの直線の式$b'=x'a'$にプレートを一致させるように変換することにより、ある一つの対象画像における色($a$,$b$)が参照画像のグラデーションプレートの直線の式$b'=x'a'$の($a'$,$b'$)と変換されることにより参照画像の色特徴に近づけることを行う。
+\newpage
+\subsection{実験手順}
+以下の図3.7はLab色空間に基づくグラデーションプレートを用いた色変換法の実験手順である。
+\begin{figure}[htbp]
+\begin{shadebox}
+\begin{itemize}
+\item 手順1 \\
+対となる画像の対象画像と参照画像それぞれに対してRGB値からLab値に色変換を施す。
+\item 手順2 \\
+対象画像と参照画像の特徴領域の色分布からグラデーションプレートを求める。
+\item 手順3 \\
+対象画像のグラデーションプレートを参照画像のグラデーションプレートに一致させるように変換をする。
+\item 手順4 \\
+ それぞれで色変換を行った画像と元画像を見比べ、どちらの変換がより元画像の与える印象に近づいたかどうかを比較、分析を行う。
+
+ 
+\label{fig:tezyun2}
+\end{itemize}
+\end{shadebox}
+\caption{グラデーションプレートを用いた実験手順}
+\end{figure}
